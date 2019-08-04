@@ -23,17 +23,12 @@ Plugin 'sheerun/vim-polyglot'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+source $HOME/.config/nvim/keys.vim
+
 set exrc
 set secure
 
-" Move lines arround
-nnoremap <leader>k :m-2<cr>==
-nnoremap <leader>j :m+<cr>==
-xnoremap <leader>k :m-2<cr>gv=gv
-xnoremap <leader>j :m'>+<cr>gv=gv
-
 " Confs
-inoremap jj <ESC>
 let g:netrw_winsize = 25
 set tabstop=4
 set shiftwidth=4
