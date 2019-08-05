@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'dracula/vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Yggdroot/indentLine'
 
@@ -24,6 +24,10 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 source $HOME/.config/nvim/keys.vim
+
+colorscheme gruvbox
+set background=dark    " Setting dark mode
+let g:gruvbox_contrast_dark = 'soft'
 
 set exrc
 set secure
