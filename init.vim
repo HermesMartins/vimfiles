@@ -19,6 +19,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'neoclide/coc.nvim'
 Plugin 'sheerun/vim-polyglot'
 
+Plugin 'ludovicchabant/vim-gutentags'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,3 +70,6 @@ autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
 autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
 
 let g:php_namespace_sort_after_insert = 1
+
+" NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
