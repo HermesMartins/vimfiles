@@ -11,7 +11,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Yggdroot/indentLine'
 
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
@@ -20,6 +19,7 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'sheerun/vim-polyglot'
 
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,9 +45,8 @@ let g:indentLine_char = '┊'
 set list lcs=tab:\|\
 syntax on
 
-"CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Fzf
+nnoremap <C-p> :Files<CR>
 
 "Tagbar
 nmap <leader>i :TagbarToggle<CR>
