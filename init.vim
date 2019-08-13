@@ -20,6 +20,8 @@ Plugin 'sheerun/vim-polyglot'
 
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'junegunn/fzf.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,9 +47,6 @@ let g:indentLine_char = '┊'
 set list lcs=tab:\|\
 syntax on
 
-" Fzf
-nnoremap <C-p> :Files<CR>
-
 "Tagbar
 nmap <leader>i :TagbarToggle<CR>
 
@@ -72,3 +71,8 @@ let g:php_namespace_sort_after_insert = 1
 
 " NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
