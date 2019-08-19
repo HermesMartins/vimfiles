@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,23 +26,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 source $HOME/.config/nvim/keys.vim
+source $HOME/.config/nvim/sets.vim
 
 colorscheme gruvbox
 set background=dark    " Setting dark mode
 let g:gruvbox_contrast_dark = 'soft'
 
-set exrc
-set secure
-
-" Confs
-let g:netrw_winsize = 25
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set number
-set relativenumber
-let g:indentLine_char = '┊'
-set list lcs=tab:\|\
 syntax on
 
 " Fzf
@@ -72,3 +61,5 @@ let g:php_namespace_sort_after_insert = 1
 
 " NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
+
+set rtp+=/usr/local/opt/fzf
