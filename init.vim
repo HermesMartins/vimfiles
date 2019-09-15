@@ -7,7 +7,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
+Plugin 'rakr/vim-one'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Yggdroot/indentLine'
 
@@ -22,6 +23,9 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'junegunn/fzf.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,9 +34,11 @@ filetype plugin indent on    " required
 source $HOME/.config/nvim/keys.vim
 source $HOME/.config/nvim/sets.vim
 
-colorscheme gruvbox
-set background=dark    " Setting dark mode
-let g:gruvbox_contrast_dark = 'soft'
+"colorscheme gruvbox
+"set background=dark    " Setting dark mode
+"let g:gruvbox_contrast_dark = 'soft'
+colorscheme one
+set background=dark
 
 syntax on
 
@@ -68,3 +74,11 @@ set rtp+=/usr/local/opt/fzf
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ 'component': {
+      \   'filename': '%f',
+      \ },
+     \ }
+

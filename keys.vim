@@ -1,7 +1,7 @@
 let mapleader = ","
 "
 " An easy way to esc on insert mode
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 " fzf
 nnoremap <C-p> :Files<CR>
