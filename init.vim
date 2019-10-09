@@ -5,11 +5,9 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-
-" Plugin 'morhetz/gruvbox'
-Plugin 'rakr/vim-one'
-Plugin 'itchyny/lightline.vim'
+Plugin 'VundleVim/Vundle.vim' " plugin manager
+Plugin 'flrnprz/plastic.vim' "theme
+Plugin 'itchyny/lightline.vim' " status bar
 Plugin 'Yggdroot/indentLine'
 
 Plugin 'arnaud-lb/vim-php-namespace'
@@ -26,7 +24,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'easymotion/vim-easymotion'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,12 +31,8 @@ filetype plugin indent on    " required
 source $HOME/.config/nvim/keys.vim
 source $HOME/.config/nvim/sets.vim
 
-"colorscheme gruvbox
-"set background=dark    " Setting dark mode
-"let g:gruvbox_contrast_dark = 'soft'
-colorscheme one
+colorscheme plastic
 set background=dark
-
 syntax on
 
 "Tagbar
@@ -64,9 +57,6 @@ autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
 
 let g:php_namespace_sort_after_insert = 1
 
-" NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
-
 " only for mac??
 set rtp+=/usr/local/opt/fzf
 
@@ -76,7 +66,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'plastic',
       \ 'component': {
       \   'filename': '%f',
       \ },
