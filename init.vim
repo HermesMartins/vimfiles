@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " plugin manager
-Plugin 'flrnprz/plastic.vim' "theme
+Plugin 'tomasr/molokai' "theme
 Plugin 'itchyny/lightline.vim' " status bar
 Plugin 'Yggdroot/indentLine'
 
@@ -19,32 +19,42 @@ Plugin 'sheerun/vim-polyglot'
 " Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'ap/vim-css-color'
+Plugin 'prettier/vim-prettier'
 
 Plugin 'easymotion/vim-easymotion'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-source $HOME/.config/nvim/keys.vim
-source $HOME/.config/nvim/sets.vim
-
-colorscheme plastic
-set background=dark
+" ---------------------- General Settings ---------------------- "
+set encoding=UTF-8
 syntax on
+set autoread
+set number relativenumber
+set colorcolumn=81
+set cursorline
 
-"Tagbar
-nmap <leader>i :TagbarToggle<CR>
+" More natural split opening
+set splitbelow
+set splitright
+
+set exrc
+set secure
+
+" Confs
+let g:netrw_winsize = 25
+set tabstop=4
+set shiftwidth=4
+set expandtab
+let g:indentLine_char = '┊'
+set list lcs=tab:\|\
+" ---------------------- .end/General Settings ---------------------- "
 
 " only for mac??
 set rtp+=/usr/local/opt/fzf
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -53,3 +63,17 @@ let g:lightline = {
       \ },
      \ }
 
+" ---------------------- Key Remapping ---------------------- "
+let mapleader = ","
+
+inoremap jk <ESC>
+nmap <C-p> :Files<CR>
+nmap <C-a> :Ag<CR>
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <leader>i :TagbarToggle<CR>
+
+" move lines arround
+nnoremap <leader>k :m-2<cr>==
+nnoremap <leader>j :m+<cr>==
+xnoremap <leader>k :m-2<cr>gv=gv
+xnoremap <leader>j :m'>+<cr>gv=gv
