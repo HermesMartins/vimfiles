@@ -10,18 +10,21 @@ Plugin 'itchyny/lightline.vim' " status bar
 Plugin 'Yggdroot/indentLine'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdcommenter'
 
 " Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'editorconfig/editorconfig-vim'
 
-Plugin 'easymotion/vim-easymotion'
+" Motion
+    Plugin 'easymotion/vim-easymotion'
+" Search
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
 " Syntax
     Plugin 'ap/vim-css-color'
+    Plugin 'editorconfig/editorconfig-vim'
     Plugin 'prettier/vim-prettier'
-    Plugin 'neoclide/coc.nvim'
     Plugin 'sheerun/vim-polyglot'
+    Plugin 'neoclide/coc.nvim'
 " Color-schemes
     Plugin 'tomasr/molokai' "theme
 " All of your Plugins must be added before the following line
@@ -50,6 +53,7 @@ set shiftwidth=4
 set expandtab
 let g:indentLine_char = '┊'
 set list lcs=tab:\|\
+let g:loaded_python_provider = 0
 " ---------------------- .end/General Settings ---------------------- "
 
 " only for mac??
