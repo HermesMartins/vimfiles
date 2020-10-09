@@ -51,8 +51,8 @@ let g:netrw_winsize = 25
 set tabstop=4
 set shiftwidth=4
 set expandtab
-let g:indentLine_char = '┊'
 set list lcs=tab:\|\
+let g:indentLine_char = '┊'
 let g:loaded_python_provider = 0
 " ---------------------- .end/General Settings ---------------------- "
 
@@ -73,6 +73,7 @@ inoremap jk <ESC>
 nmap <C-p> :Files<CR>
 nmap <C-a> :Ag<CR>
 nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-f> :NERDTreeFind<CR>
 
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
