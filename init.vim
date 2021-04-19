@@ -17,8 +17,11 @@ Plugin 'preservim/nerdcommenter'
 " Motion
     Plugin 'easymotion/vim-easymotion'
 " Search
-    Plugin 'junegunn/fzf'
-    Plugin 'junegunn/fzf.vim'
+    "Plugin 'junegunn/fzf'
+    "Plugin 'junegunn/fzf.vim'
+    Plugin 'nvim-lua/popup.nvim'
+    Plugin 'nvim-lua/plenary.nvim'
+    Plugin 'nvim-telescope/telescope.nvim'
 " Syntax
     Plugin 'ap/vim-css-color'
     Plugin 'editorconfig/editorconfig-vim'
@@ -26,7 +29,7 @@ Plugin 'preservim/nerdcommenter'
     Plugin 'sheerun/vim-polyglot'
     Plugin 'neoclide/coc.nvim'
 " Color-schemes
-    Plugin 'tomasr/molokai' "theme
+    Plugin 'tomasiser/vim-code-dark' "theme
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,6 +41,8 @@ set autoread
 set number relativenumber
 set colorcolumn=81
 set cursorline
+
+colorscheme codedark
 
 " More natural split opening
 set splitbelow
@@ -60,7 +65,7 @@ let g:loaded_python_provider = 0
 set rtp+=/usr/local/opt/fzf
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'codedark',
       \ 'component': {
       \   'filename': '%f',
       \ },
@@ -70,6 +75,10 @@ let g:lightline = {
 let mapleader = ","
 
 inoremap jk <ESC>
+
+nnoremap n zzn
+nnoremap N zzn
+
 nmap <C-p> :Files<CR>
 nmap <C-a> :Ag<CR>
 nmap <C-n> :NERDTreeToggle<CR>
