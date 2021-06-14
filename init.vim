@@ -79,8 +79,11 @@ inoremap jk <ESC>
 nnoremap n zzn
 nnoremap N zzn
 
-nmap <C-p> :Files<CR>
-nmap <C-a> :Ag<CR>
+nnoremap <C-p> :Telescope find_files<CR>
+nnoremap <C-a> :Telescope live_grep<CR>
+
+"nmap <C-p> :Files<CR>
+"nmap <C-a> :Ag<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-f> :NERDTreeFind<CR>
 
