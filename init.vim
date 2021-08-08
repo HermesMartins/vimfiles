@@ -12,19 +12,13 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'preservim/nerdcommenter'
 
-" Plugin 'ludovicchabant/vim-gutentags'
-
 " Motion
     Plugin 'easymotion/vim-easymotion'
 " Search
-    "Plugin 'junegunn/fzf'
-    "Plugin 'junegunn/fzf.vim'
     Plugin 'nvim-lua/popup.nvim'
     Plugin 'nvim-lua/plenary.nvim'
     Plugin 'nvim-telescope/telescope.nvim'
 " Syntax
-    Plugin 'ap/vim-css-color'
-    Plugin 'editorconfig/editorconfig-vim'
     Plugin 'sheerun/vim-polyglot'
     Plugin 'neoclide/coc.nvim'
 " Color-schemes
@@ -78,8 +72,8 @@ inoremap jk <ESC>
 nnoremap n zzn
 nnoremap N zzn
 
-nnoremap <C-p> :Telescope find_files<CR>
-nnoremap <C-a> :Telescope live_grep<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-f> :NERDTreeFind<CR>
